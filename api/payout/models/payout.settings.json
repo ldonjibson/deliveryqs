@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "payouts",
+  "info": {
+    "name": "Payout",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "bank_id": {
+      "model": "banks"
+    },
+    "amount": {
+      "type": "decimal"
+    },
+    "shopper_id": {
+      "via": "payouts",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "requested",
+        "processing",
+        "paid"
+      ]
+    }
+  }
+}

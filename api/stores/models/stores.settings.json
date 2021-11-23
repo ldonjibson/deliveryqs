@@ -1,0 +1,71 @@
+{
+  "kind": "collectionType",
+  "collectionName": "stores",
+  "info": {
+    "name": "Stores",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "registration_id": {
+      "type": "string"
+    },
+    "banner_header": {
+      "type": "text"
+    },
+    "banner_description": {
+      "type": "text"
+    },
+    "logo": {
+      "type": "string"
+    },
+    "banner_image": {
+      "type": "string"
+    },
+    "long": {
+      "type": "string"
+    },
+    "lat": {
+      "type": "string"
+    },
+    "zipcode": {
+      "type": "string"
+    },
+    "brand_id": {
+      "model": "brand",
+      "via": "stores"
+    },
+    "state": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "products": {
+      "collection": "products",
+      "via": "store_id"
+    },
+    "categories": {
+      "collection": "categories"
+    },
+    "branches": {
+      "via": "store_id",
+      "collection": "branches"
+    }
+  }
+}

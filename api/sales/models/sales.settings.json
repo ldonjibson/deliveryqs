@@ -1,0 +1,110 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sales",
+  "info": {
+    "name": "Sales",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "customer_id": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "sales"
+    },
+    "sub_total": {
+      "type": "decimal"
+    },
+    "total_amount": {
+      "type": "decimal"
+    },
+    "taxes": {
+      "type": "decimal"
+    },
+    "delivery_fee": {
+      "type": "decimal"
+    },
+    "instructions": {
+      "type": "text"
+    },
+    "promo_code": {
+      "type": "string"
+    },
+    "payment_status": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "approved",
+        "declined"
+      ]
+    },
+    "payment_channel": {
+      "type": "string"
+    },
+    "card_id": {
+      "model": "cards"
+    },
+    "order_status": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "placed",
+        "accepted",
+        "driving_to_store",
+        "picking",
+        "delivered",
+        "completed",
+        "cancelled",
+        "refunded",
+        "rejected"
+      ],
+      "default": "pending"
+    },
+    "distance_to_store": {
+      "type": "decimal"
+    },
+    "distance_to_customer": {
+      "type": "decimal"
+    },
+    "time_taken": {
+      "type": "string"
+    },
+    "fastest_route": {
+      "type": "string"
+    },
+    "delivery_proof": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "verify_alcohol": {
+      "type": "boolean"
+    },
+    "orders": {
+      "collection": "orders",
+      "via": "sales_id"
+    },
+    "tips": {
+      "collection": "tips",
+      "via": "sales_id"
+    },
+    "delivery_id": {
+      "model": "deliveries",
+      "via": "sales_id"
+    },
+    "transactions": {
+      "collection": "transactions",
+      "via": "sales_id"
+    }
+  }
+}

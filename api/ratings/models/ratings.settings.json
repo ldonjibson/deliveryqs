@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ratings",
+  "info": {
+    "name": "Ratings",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "customer_id": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "shopper_id": {
+      "via": "ratings",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "rating": {
+      "type": "decimal"
+    },
+    "review": {
+      "type": "text"
+    }
+  }
+}

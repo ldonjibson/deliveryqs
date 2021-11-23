@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "shopper_locations",
+  "info": {
+    "name": "Shopper_locations",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "user_id": {
+      "via": "shopper_locations",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "address": {
+      "type": "text"
+    },
+    "zipcode": {
+      "type": "string"
+    },
+    "set_primary": {
+      "type": "boolean"
+    },
+    "lat": {
+      "type": "string"
+    },
+    "long": {
+      "type": "string"
+    }
+  }
+}

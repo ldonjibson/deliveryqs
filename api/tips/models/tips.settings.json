@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tips",
+  "info": {
+    "name": "Tips",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "shopper_id": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "customer_id": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "amount": {
+      "type": "decimal"
+    },
+    "day": {
+      "type": "string"
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "sales_id": {
+      "via": "tips",
+      "model": "sales"
+    }
+  }
+}

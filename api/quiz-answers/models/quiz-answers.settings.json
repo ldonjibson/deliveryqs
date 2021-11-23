@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "quiz_answers",
+  "info": {
+    "name": "QuizAnswers"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "shopper_id": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "quiz_id": {
+      "via": "quiz_answers",
+      "model": "quiz"
+    },
+    "answer": {
+      "type": "string"
+    }
+  }
+}

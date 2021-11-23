@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/myshoppers",
+      "handler": "myshoppers.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/myshoppers/count",
+      "handler": "myshoppers.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/myshoppers/:id",
+      "handler": "myshoppers.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/myshoppers",
+      "handler": "myshoppers.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/myshoppers/:id",
+      "handler": "myshoppers.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/myshoppers/:id",
+      "handler": "myshoppers.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "transactions",
+  "info": {
+    "name": "transactions"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "shopper_id": {
+      "via": "transactions",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "sales_id": {
+      "via": "transactions",
+      "model": "sales"
+    },
+    "amount": {
+      "type": "decimal"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "tip",
+        "commission",
+        "others"
+      ]
+    }
+  }
+}

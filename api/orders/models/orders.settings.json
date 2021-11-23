@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "name": "Orders",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "sales_id": {
+      "via": "orders",
+      "model": "sales"
+    },
+    "product_id": {
+      "model": "products"
+    },
+    "qty": {
+      "type": "integer"
+    },
+    "amount": {
+      "type": "decimal"
+    },
+    "total_amount": {
+      "type": "decimal"
+    },
+    "accept_substitution": {
+      "type": "boolean"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "shopping",
+        "purchased",
+        "review",
+        "cancelled",
+        "refund"
+      ],
+      "default": "shopping"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/shopper-locations",
+      "handler": "shopper-locations.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/shopper-locations/count",
+      "handler": "shopper-locations.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/shopper-locations/:id",
+      "handler": "shopper-locations.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/shopper-locations",
+      "handler": "shopper-locations.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/shopper-locations/:id",
+      "handler": "shopper-locations.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/shopper-locations/:id",
+      "handler": "shopper-locations.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "kind": "singleType",
+  "collectionName": "settings",
+  "info": {
+    "name": "Settings",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "customer_how_it_works_step1": {
+      "type": "string"
+    },
+    "value": {
+      "type": "richtext"
+    },
+    "customer_how_it_works_step2": {
+      "type": "string"
+    },
+    "customer_how_it_works_step3": {
+      "type": "string"
+    },
+    "shopper_how_it_works_step1": {
+      "type": "string"
+    },
+    "shopper_how_it_works_step2": {
+      "type": "string"
+    },
+    "shopper_how_it_works_step3": {
+      "type": "string"
+    },
+    "shopper_how_it_works_step4": {
+      "type": "string"
+    },
+    "app_logo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "app_store_url": {
+      "type": "string"
+    },
+    "play_store_url": {
+      "type": "string"
+    },
+    "copyright_about": {
+      "type": "text"
+    },
+    "copyright_text": {
+      "type": "string"
+    },
+    "footer_logo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "contact_phone": {
+      "type": "string"
+    },
+    "contact_email": {
+      "type": "string"
+    },
+    "contact_address1": {
+      "type": "string"
+    },
+    "contact_address2": {
+      "type": "string"
+    },
+    "about_info": {
+      "type": "text"
+    },
+    "covid_19_info": {
+      "type": "richtext"
+    },
+    "terms": {
+      "type": "richtext"
+    },
+    "privacy_policy": {
+      "type": "richtext"
+    }
+  }
+}

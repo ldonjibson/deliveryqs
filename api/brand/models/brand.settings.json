@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "brands",
+  "info": {
+    "name": "Brands",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "stores": {
+      "via": "brand_id",
+      "collection": "stores"
+    },
+    "logo": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

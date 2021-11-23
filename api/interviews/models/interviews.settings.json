@@ -1,0 +1,77 @@
+{
+  "kind": "collectionType",
+  "collectionName": "interviews",
+  "info": {
+    "name": "Interviews",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "firstname": {
+      "type": "string"
+    },
+    "lastname": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "above_18": {
+      "type": "boolean"
+    },
+    "license_valid": {
+      "type": "boolean"
+    },
+    "license_years": {
+      "type": "integer"
+    },
+    "have_a_car": {
+      "type": "boolean"
+    },
+    "car_insurance": {
+      "type": "boolean"
+    },
+    "car_brand": {
+      "type": "string"
+    },
+    "car_model": {
+      "type": "string"
+    },
+    "car_year": {
+      "type": "string"
+    },
+    "city_of_interest": {
+      "type": "string"
+    },
+    "tshirt_size": {
+      "type": "string"
+    },
+    "referral_code": {
+      "type": "string"
+    },
+    "conscent": {
+      "type": "boolean"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "reviewing",
+        "approved",
+        "declined"
+      ]
+    },
+    "license_image": {
+      "type": "string"
+    },
+    "car_docs": {
+      "type": "string"
+    }
+  }
+}

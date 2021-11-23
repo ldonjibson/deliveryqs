@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "shopper_availabilities",
+  "info": {
+    "name": "Shopper_availability",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "user_id": {
+      "via": "shopper_availabilities",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "day": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date"
+    },
+    "week": {
+      "type": "string"
+    },
+    "year": {
+      "type": "string"
+    },
+    "time_slots": {
+      "collection": "slots"
+    }
+  }
+}

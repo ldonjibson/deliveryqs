@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "quiz_options",
+  "info": {
+    "name": "QuizOptions"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "option": {
+      "type": "text"
+    },
+    "quiz_id": {
+      "via": "quiz_options",
+      "model": "quiz"
+    }
+  }
+}

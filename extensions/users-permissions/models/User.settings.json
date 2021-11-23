@@ -1,0 +1,187 @@
+{
+  "kind": "collectionType",
+  "collectionName": "users-permissions_user",
+  "info": {
+    "name": "user",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false,
+    "timestamps": true
+  },
+  "attributes": {
+    "username": {
+      "type": "string",
+      "minLength": 3,
+      "unique": true,
+      "configurable": false,
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "minLength": 6,
+      "configurable": false,
+      "required": true
+    },
+    "provider": {
+      "type": "string",
+      "configurable": false
+    },
+    "password": {
+      "type": "password",
+      "minLength": 6,
+      "configurable": false,
+      "private": true
+    },
+    "resetPasswordToken": {
+      "type": "string",
+      "configurable": false,
+      "private": true
+    },
+    "confirmationToken": {
+      "type": "string",
+      "configurable": false,
+      "private": true
+    },
+    "confirmed": {
+      "type": "boolean",
+      "default": false,
+      "configurable": false
+    },
+    "blocked": {
+      "type": "boolean",
+      "default": false,
+      "configurable": false
+    },
+    "role": {
+      "model": "role",
+      "via": "users",
+      "plugin": "users-permissions",
+      "configurable": false
+    },
+    "firstname": {
+      "type": "string"
+    },
+    "lastname": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "zipcode": {
+      "type": "string"
+    },
+    "geo_location": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "shopper",
+        "customer",
+        "admin"
+      ]
+    },
+    "referral_code": {
+      "type": "string"
+    },
+    "membership_id": {
+      "type": "string"
+    },
+    "covid_symptoms": {
+      "type": "boolean"
+    },
+    "travelled_out": {
+      "type": "boolean"
+    },
+    "referral": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "sales": {
+      "via": "customer_id",
+      "collection": "sales"
+    },
+    "avatar": {
+      "type": "text"
+    },
+    "shopper_availabilities": {
+      "collection": "shopper-availability",
+      "via": "user_id"
+    },
+    "shopper_locations": {
+      "collection": "shopper-locations",
+      "via": "user_id"
+    },
+    "cards": {
+      "collection": "cards",
+      "via": "user_id"
+    },
+    "ratings": {
+      "collection": "ratings",
+      "via": "shopper_id"
+    },
+    "session_token": {
+      "type": "string"
+    },
+    "token_expiry": {
+      "type": "string"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "active",
+        "inactive",
+        "suspended",
+        "blocked",
+        "debtor"
+      ]
+    },
+    "lat": {
+      "type": "string"
+    },
+    "long": {
+      "type": "string"
+    },
+    "wallet_balance": {
+      "type": "decimal"
+    },
+    "transactions": {
+      "collection": "transactions",
+      "via": "shopper_id"
+    },
+    "payouts": {
+      "collection": "payout",
+      "via": "shopper_id"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "address": {
+      "type": "text"
+    },
+    "sent_messages": {
+      "collection": "messages",
+      "via": "sender_id"
+    },
+    "received_messages": {
+      "collection": "messages",
+      "via": "recipient_id"
+    },
+    "rooms": {
+      "collection": "rooms",
+      "via": "user_id"
+    },
+    "myrooms": {
+      "collection": "rooms",
+      "via": "friend_id"
+    },
+    "first_time": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

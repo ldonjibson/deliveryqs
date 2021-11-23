@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "quizzes",
+  "info": {
+    "name": "Quiz",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "question": {
+      "type": "text"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "onboarding",
+        "audio",
+        "video",
+        "multichoice",
+        "simple_answer"
+      ]
+    },
+    "quiz_options": {
+      "collection": "quiz-options",
+      "via": "quiz_id"
+    },
+    "quiz_answers": {
+      "collection": "quiz-answers",
+      "via": "quiz_id"
+    }
+  }
+}

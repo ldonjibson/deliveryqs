@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cards",
+  "info": {
+    "name": "Cards",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "user_id": {
+      "via": "cards",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "set_default": {
+      "type": "boolean"
+    },
+    "card_name": {
+      "type": "string"
+    },
+    "card_number": {
+      "type": "string"
+    },
+    "ccv": {
+      "type": "string"
+    },
+    "zipcode": {
+      "type": "string"
+    },
+    "expiry": {
+      "type": "string"
+    }
+  }
+}

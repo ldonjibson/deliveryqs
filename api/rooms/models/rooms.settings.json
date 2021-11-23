@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "rooms",
+  "info": {
+    "name": "rooms",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "description": {
+      "type": "string"
+    },
+    "messages": {
+      "via": "room_id",
+      "collection": "messages"
+    },
+    "user_id": {
+      "via": "rooms",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "friend_id": {
+      "via": "myrooms",
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}

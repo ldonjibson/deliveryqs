@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "slots",
+  "info": {
+    "name": "slots",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "start_time": {
+      "type": "string"
+    },
+    "end_time": {
+      "type": "string"
+    },
+    "hour": {
+      "type": "string"
+    }
+  }
+}

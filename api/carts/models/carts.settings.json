@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "carts",
+  "info": {
+    "name": "Carts"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "product_id": {
+      "model": "products"
+    },
+    "customer_id": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "qty": {
+      "type": "integer"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "wishlist",
+        "cart"
+      ]
+    }
+  }
+}

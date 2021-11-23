@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "supports",
+  "info": {
+    "name": "Supports"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "user_id": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "comment": {
+      "type": "text"
+    },
+    "reply": {
+      "type": "text"
+    },
+    "status": {
+      "type": "string"
+    }
+  }
+}

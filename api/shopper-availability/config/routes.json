@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/shopper-availabilities",
+      "handler": "shopper-availability.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/shopper-availabilities/count",
+      "handler": "shopper-availability.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/shopper-availabilities/:id",
+      "handler": "shopper-availability.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/shopper-availabilities",
+      "handler": "shopper-availability.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/shopper-availabilities/:id",
+      "handler": "shopper-availability.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/shopper-availabilities/:id",
+      "handler": "shopper-availability.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

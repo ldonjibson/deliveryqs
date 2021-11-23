@@ -1,0 +1,86 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "name": "Products",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "price": {
+      "type": "decimal",
+      "required": true
+    },
+    "unit": {
+      "type": "string"
+    },
+    "image": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "size": {
+      "type": "string"
+    },
+    "nutrition": {
+      "type": "text"
+    },
+    "upc": {
+      "type": "string"
+    },
+    "subcategory_id": {
+      "model": "subcategories",
+      "via": "products"
+    },
+    "slug": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "ordering": {
+      "type": "integer"
+    },
+    "in_stock": {
+      "type": "integer",
+      "default": 10
+    },
+    "preparation": {
+      "type": "text"
+    },
+    "storage": {
+      "type": "text"
+    },
+    "category_id": {
+      "model": "categories",
+      "via": "products"
+    },
+    "store_id": {
+      "via": "products",
+      "model": "stores"
+    },
+    "measurable": {
+      "type": "boolean",
+      "default": false
+    },
+    "picture": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "kind": "collectionType",
+  "collectionName": "deliveries",
+  "info": {
+    "name": "Deliveries",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "delivery_firstname": {
+      "type": "string"
+    },
+    "delivery_lastname": {
+      "type": "string"
+    },
+    "delivery_address": {
+      "type": "string"
+    },
+    "delivery_zipcode": {
+      "type": "string"
+    },
+    "delivery_date": {
+      "type": "date"
+    },
+    "delivery_day": {
+      "type": "string"
+    },
+    "delivery_time": {
+      "type": "string"
+    },
+    "delivery_phonenumber": {
+      "type": "string"
+    },
+    "set_default": {
+      "type": "boolean"
+    },
+    "delivery_instructions": {
+      "type": "text"
+    },
+    "leave_at_door": {
+      "type": "boolean"
+    },
+    "shopper_id": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "customer_id": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "sales_id": {
+      "via": "delivery_id",
+      "model": "sales"
+    },
+    "long": {
+      "type": "string"
+    },
+    "lat": {
+      "type": "string"
+    }
+  }
+}

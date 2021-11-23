@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "myshoppers",
+  "info": {
+    "name": "Myshoppers"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "customer_id": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "shopper_id": {
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}
