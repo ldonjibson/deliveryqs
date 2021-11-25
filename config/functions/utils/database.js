@@ -400,7 +400,7 @@ async function chat_history(user_id, token){
                     lastname
                     avatar
               }
-               messages(sort:"created_at:asc"){
+               messages(sort:"created_at:desc"){
                   id
                   text
                   created_at
